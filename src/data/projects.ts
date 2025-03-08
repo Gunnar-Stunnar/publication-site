@@ -16,6 +16,6 @@ export const projects: Project[] = [
     thumbnail: "thermal",
     tags: ["Computational Neuroscience", "Statistical Physics", "Complex Systems"],
     featured: true,
-    hasDemo: true
+    hasDemo: false
   }
 ]; 
