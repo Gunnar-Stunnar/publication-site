@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Thermal Researcher",
-  description: "Research portfolio showcasing thermal analysis projects and publications",
+  title: "Gůnñar | Computational Neuroscience Graduate Student",
+  description: "Research portfolio showcasing computational neuroscience projects and publications and inspiring thoughts on the future of artificial intelligence.",
 };
 
 export default function RootLayout({
