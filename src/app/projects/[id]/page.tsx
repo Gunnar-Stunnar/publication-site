@@ -4,20 +4,13 @@ import { projects } from '@/data/projects';
 import Demo from '@/components/projects/Demo';
 import { notFound } from 'next/navigation';
 
-interface ProjectPageProps {
-  params: {
-    id: string;
-  };
-  searchParams: Record<string, string | string[] | undefined>;
-}
-
 export function generateStaticParams() {
   return projects.map((project) => ({
     id: project.id.toString(),
   }));
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
+export default function ProjectPage({ params }: { params: { id: string } }) {
   const projectId = parseInt(params.id);
   const project = projects.find(p => p.id === projectId);
   
