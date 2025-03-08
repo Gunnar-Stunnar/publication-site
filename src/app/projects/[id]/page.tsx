@@ -8,6 +8,7 @@ interface ProjectPageProps {
   params: {
     id: string;
   };
+  searchParams: Record<string, string | string[] | undefined>;
 }
 
 export function generateStaticParams() {
