@@ -6,8 +6,18 @@ import IsingModelSimulation from '@/components/projects/IsingModelSimulation';
 import GlowingBorder from '@/components/common/GlowingBorder';
 import content from '@/config/content.json';
 
+// Add this interface to define the related project type
+interface RelatedProject {
+  id: number | string;
+  title: string;
+  description: string;
+}
+
 export default function BrainCriticalityProject() {
   const { brainCriticality } = content.projects;
+  
+  // Type assertion to fix the "never" type issue
+  const relatedProjects = brainCriticality.relatedProjects as RelatedProject[];
   
   return (
     <div className="py-12">
@@ -80,7 +90,7 @@ export default function BrainCriticalityProject() {
       <div className="mt-12">
         <h2 className="text-2xl font-bold mb-4">Related Projects</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          {brainCriticality.relatedProjects.map((project, index) => (
+          {relatedProjects.map((project, index) => (
             <Link key={index} href={`/projects/${project.id}`} className="block bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
               <h3 className="text-xl font-bold mb-2">{project.title}</h3>
               <p className="text-gray-700">{project.description}</p>

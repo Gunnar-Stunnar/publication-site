@@ -5,6 +5,7 @@ export interface Project {
   thumbnail: string;
   tags: string[];
   featured: boolean;
+  hasDemo: boolean;
 }
 
 export const projects: Project[] = [
@@ -14,6 +15,7 @@ export const projects: Project[] = [
     description: "Exploring how neural systems may operate at critical points between order and disorder for optimal information processing.",
     thumbnail: "thermal",
     tags: ["Computational Neuroscience", "Statistical Physics", "Complex Systems"],
-    featured: true
+    featured: true,
+    hasDemo: false
   }
 ]; 

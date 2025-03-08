@@ -10,8 +10,9 @@ export function generateStaticParams() {
   }));
 }
 // Use an async function to match Next.js expected type
-export default function ProjectPage({ params }: { params: { id: string } }) {
-  const projectId = parseInt(params.id);
+export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
+  const params_ = await params;
+  const projectId = params_.id;
   const project = projects.find(p => p.id === projectId);
   
   if (!project) {
@@ -60,7 +61,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         {project.hasDemo && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold mb-4">Interactive Demo</h2>
-            <Demo projectId={project.id} />
+            <Demo projectId={parseInt(project.id)} />
             <p className="mt-4 text-gray-600 italic">
               This interactive demonstration showcases the key features and capabilities of our research.
             </p>
