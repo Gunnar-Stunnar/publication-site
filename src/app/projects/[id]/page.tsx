@@ -10,7 +10,8 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
+// Use an async function to match Next.js expected type
+export default async function ProjectPage({ params }: { params: { id: string } }) {
   const projectId = parseInt(params.id);
   const project = projects.find(p => p.id === projectId);
   
