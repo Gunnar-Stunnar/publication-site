@@ -9,7 +9,7 @@ export function generateStaticParams() {
     id: project.id.toString(),
   }));
 }
-export type paramsType = Promise<{ id: string }>;
+export type paramsType = { id: string };
 // Use an async function to match Next.js expected type
 export default async function ProjectPage({ params }: { params: paramsType }) {
   const projectId = parseInt(params.id);
