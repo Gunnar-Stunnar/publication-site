@@ -11,7 +11,7 @@ export function generateStaticParams() {
 }
 
 // Use an async function to match Next.js expected type
-export default async function ProjectPage({ params }: { params: { id: string } }) {
+export default async function ProjectPage({ params }: { params: { id: string } }): Promise<any> {
   const projectId = parseInt(params.id);
   const project = projects.find(p => p.id === projectId);
   
