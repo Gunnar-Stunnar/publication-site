@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gůnñar | Computational Neuroscience Graduate Student",
+  title: "Gůnñař | Computational Neuroscience Graduate Student",
   description: "Research portfolio showcasing computational neuroscience projects and publications and inspiring thoughts on the future of artificial intelligence.",
 };
 
