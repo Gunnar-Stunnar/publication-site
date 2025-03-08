@@ -1,26 +1,19 @@
-export const projects = [
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+  tags: string[];
+  featured: boolean;
+}
+
+export const projects: Project[] = [
   {
-    id: 1,
-    title: "Thermal Analysis Model",
-    description: "A comprehensive model analyzing heat distribution patterns in urban environments.",
-    tags: ["Machine Learning", "Data Visualization", "Urban Planning"],
+    id: "4",
+    title: "Brain Criticality Theory",
+    description: "Exploring how neural systems may operate at critical points between order and disorder for optimal information processing.",
     thumbnail: "thermal",
-    hasDemo: true
-  },
-  {
-    id: 2,
-    title: "Gradient Optimization Algorithm",
-    description: "Novel approach to gradient descent optimization with applications in computational modeling.",
-    tags: ["Algorithms", "Optimization", "Computational Science"],
-    thumbnail: "gradient",
-    hasDemo: true
-  },
-  {
-    id: 3,
-    title: "Thermographic Imaging System",
-    description: "Development of a new imaging technique for thermal pattern recognition.",
-    tags: ["Computer Vision", "Imaging", "Pattern Recognition"],
-    thumbnail: "thermographic",
-    hasDemo: true
+    tags: ["Computational Neuroscience", "Statistical Physics", "Complex Systems"],
+    featured: true
   }
 ]; 

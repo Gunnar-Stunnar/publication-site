@@ -1,0 +1,58 @@
+{
+    "personal": {
+      "name": "Gunnar E",
+      "title": "Computational Neuroscience Graduate Student",
+      "bio": {
+        "short": "I'm a computational neuroscience graduate student at University of Colorado Denver, I am focused in the computational modeling of neural systems and applications in artificial intelligence.",
+        "extended": [
+         ]
+      },
+      "skills": [
+        "Machine Learning",
+        "Data Visualization",
+        "Computational Modeling",
+        "Thermal Analysis",
+        "Pattern Recognition",
+        "Neural Networks",
+        "Deep Learning",
+        "Artificial Intelligence",
+        "Statistical Physics",
+        "Computational Neuroscience"
+      ]
+    },
+    "projects": {
+      "brainCriticality": {
+        "overview": "This research explores the hypothesis that the brain operates at or near a critical state, similar to physical systems at phase transitions. Critical systems exhibit unique properties like long-range correlations, power-law distributions, and optimal information processing.",
+        "methodology": "Using computational models based on statistical physics, we investigate how neural networks might self-organize toward criticality and how this affects information processing capabilities.",
+        "demoDescription": "The Ising model is a fundamental model in statistical physics that exhibits a phase transition. It serves as a useful analogy for understanding criticality in neural systems. This interactive simulation demonstrates how systems behave differently at, below, and above the critical temperature.",
+        "keyFindings": [
+          {
+            "title": "Optimal Information Processing",
+            "description": "Systems at criticality maximize information transmission, storage, and processing capabilities, potentially explaining why the brain might operate near this regime."
+          },
+          {
+            "title": "Scale-Free Dynamics",
+            "description": "Neural activity patterns in critical systems exhibit scale-free properties, similar to neurophysiological recordings from real brains."
+          },
+          {
+            "title": "Self-Organized Criticality",
+            "description": "Our models demonstrate how neural networks can self-organize toward critical states through plasticity mechanisms and homeostatic regulation."
+          }
+        ],
+        "implications": {
+          "intro": "Understanding brain criticality has profound implications for neuroscience, artificial intelligence, and treating neurological disorders:",
+          "points": [
+            "New perspectives on neural information processing and brain function",
+            "Insights into neurological disorders as deviations from critical states",
+            "Design principles for more efficient artificial neural networks",
+            "Novel therapeutic approaches targeting the restoration of critical dynamics"
+          ]
+        },
+        "relatedProjects": [
+        ]
+      }
+    },
+    "siteInfo": {
+      "copyright": "All Rights Reserved"
+    }
+  } 

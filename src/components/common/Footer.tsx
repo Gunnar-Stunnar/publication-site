@@ -1,6 +1,9 @@
 import React from 'react';
+import content from '@/config/content.json';
 
 const Footer = () => {
+  const { personal, siteInfo } = content;
+  
   return (
     <div className="mt-16 border-t border-gray-200 relative">
       <div className="h-3 relative overflow-hidden">
@@ -17,8 +20,8 @@ const Footer = () => {
       </div>
       <div className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center">
-          <div className="text-lg font-bold">Your Name</div>
-          <div className="text-gray-500">© {new Date().getFullYear()} All Rights Reserved</div>
+          <div className="text-lg font-bold">{personal.name}</div>
+          <div className="text-gray-500">© {new Date().getFullYear()} {siteInfo.copyright}</div>
         </div>
       </div>
     </div>
