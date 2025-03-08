@@ -1,8 +1,6 @@
-import Link from "next/link";
-import { projects } from "@/data/projects";
-import ThermalThumbnail from "@/components/common/ThermalThumbnail";
+import React from 'react';
 
-export default function Home() {
+export default function AboutPage() {
   return (
     <div className="py-12">
       <div className="w-full p-6">
@@ -18,10 +16,18 @@ export default function Home() {
               }}></div>
               
               {/* Glass effect overlay */}
-              <div className="absolute inset-0 glass-effect"></div>
+              <div className="absolute inset-0" style={{
+                backdropFilter: 'blur(8px)',
+                backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                borderTop: '1px solid rgba(255, 255, 255, 0.5)',
+                borderLeft: '1px solid rgba(255, 255, 255, 0.5)',
+                boxShadow: 'inset 0 1px 1px rgba(255, 255, 255, 0.3)'
+              }}></div>
               
               {/* Light reflection */}
-              <div className="absolute top-0 left-0 right-0 h-1/3 rounded-t-lg light-reflection"></div>
+              <div className="absolute top-0 left-0 right-0 h-1/3 rounded-t-lg" style={{
+                background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 50%, transparent)'
+              }}></div>
             </div>
           </div>
           <div className="w-full md:w-2/3">
@@ -30,6 +36,12 @@ export default function Home() {
             </p>
             <p className="text-lg mb-4">
               With a background in both computer science and physics, I bring an interdisciplinary approach to solving challenging problems in thermal imaging and analysis.
+            </p>
+            <p className="text-lg mb-4">
+              Throughout my career, I've collaborated with researchers across multiple disciplines, including urban planning, environmental science, and materials engineering. These collaborations have led to innovative approaches to thermal analysis and visualization.
+            </p>
+            <p className="text-lg mb-4">
+              My research has been published in leading journals and presented at international conferences. I'm passionate about making complex data accessible through intuitive visualizations and interactive demonstrations.
             </p>
             <div className="flex flex-wrap gap-4 mt-8">
               <div className="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm">
@@ -41,46 +53,14 @@ export default function Home() {
               <div className="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm">
                 Computational Modeling
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div className="mt-16">
-        <h2 className="text-2xl font-bold mb-6">Featured Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.slice(0, 3).map(project => (
-            <div key={project.id} className="border border-gray-200 rounded-lg overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300 relative group">
-              <ThermalThumbnail type={project.thumbnail} />
-              <div className="p-6 relative">
-                {/* Glass card effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 glass-card"></div>
-                <h2 className="text-xl font-bold mb-2 relative z-10">{project.title}</h2>
-                <p className="text-gray-700 mb-4 relative z-10">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4 relative z-10">
-                  {project.tags.slice(0, 2).map(tag => (
-                    <span key={tag} className="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <Link 
-                  href={`/projects/${project.id}`}
-                  className="px-4 py-2 bg-black text-white rounded hover:bg-gray-800 relative z-10 inline-block"
-                >
-                  View Project
-                </Link>
+              <div className="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm">
+                Thermal Analysis
+              </div>
+              <div className="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm">
+                Pattern Recognition
               </div>
             </div>
-          ))}
-        </div>
-        <div className="mt-8 text-center">
-          <Link 
-            href="/projects"
-            className="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 inline-block"
-          >
-            View All Projects
-          </Link>
+          </div>
         </div>
       </div>
     </div>
