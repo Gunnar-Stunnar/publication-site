@@ -37,11 +37,17 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="w-full md:w-2/3">
-            {personal.bio.extended.map((paragraph, index) => (
-              <p key={index} className="text-lg mb-4">
-                {paragraph}
-              </p>
-            ))}
+            {personal.bio.extended.map((item: { type: string; text: string }, index: number) =>
+              item.type === 'heading' ? (
+                <h2 key={index} className="text-2xl font-bold mt-8 mb-3">
+                  {item.text}
+                </h2>
+              ) : (
+                <p key={index} className="text-lg mb-4">
+                  {item.text}
+                </p>
+              )
+            )}
             <div className="flex flex-wrap gap-4 mt-8">
               {personal.skills.map((skill, index) => (
                 <div key={index} className="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm">

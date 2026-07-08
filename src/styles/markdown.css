@@ -1,0 +1,117 @@
+/* Custom CSS for Markdown Content */
+
+/* Code syntax highlighting themes */
+.markdown-content pre {
+  @apply bg-gray-900 text-gray-100 p-6 rounded-lg overflow-x-auto border border-gray-700;
+}
+
+.markdown-content code {
+  @apply font-mono;
+}
+
+/* Custom scrollbar for code blocks */
+.markdown-content pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.markdown-content pre::-webkit-scrollbar-track {
+  @apply bg-gray-800 rounded;
+}
+
+.markdown-content pre::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded hover:bg-gray-500;
+}
+
+/* Physics/Math specific styles */
+.math-expression {
+  @apply bg-blue-50 p-2 rounded border-l-4 border-blue-300 my-4;
+}
+
+/* Custom heading styles with physics theme */
+.physics-heading {
+  @apply text-blue-900 border-b-2 border-blue-200;
+}
+
+/* Code block language labels */
+.code-block-wrapper {
+  @apply relative;
+}
+
+.code-block-wrapper::before {
+  content: attr(data-language);
+  @apply absolute top-2 right-2 text-xs text-gray-400 uppercase font-mono;
+}
+
+/* Custom blockquote styles for different types */
+.quote-note {
+  @apply border-l-4 border-blue-300 bg-blue-50 text-blue-900;
+}
+
+.quote-warning {
+  @apply border-l-4 border-yellow-300 bg-yellow-50 text-yellow-900;
+}
+
+.quote-tip {
+  @apply border-l-4 border-green-300 bg-green-50 text-green-900;
+}
+
+.quote-important {
+  @apply border-l-4 border-red-300 bg-red-50 text-red-900;
+}
+
+/* Table styles for data/results */
+.data-table {
+  @apply border-collapse border border-gray-300 rounded-lg overflow-hidden shadow-sm;
+}
+
+.data-table th {
+  @apply bg-blue-100 text-blue-900 font-semibold;
+}
+
+.data-table tbody tr:nth-child(even) {
+  @apply bg-gray-50;
+}
+
+/* Responsive image containers */
+.image-container {
+  @apply my-6 text-center;
+}
+
+.image-container img {
+  @apply max-w-full h-auto rounded-lg shadow-lg mx-auto;
+}
+
+.image-caption {
+  @apply text-sm text-gray-500 mt-2 italic;
+}
+
+/* Custom list styles */
+.checklist {
+  @apply list-none pl-0;
+}
+
+.checklist li::before {
+  content: "✓";
+  @apply text-green-500 font-bold mr-2;
+}
+
+/* Reading progress indicator (if you want to add this) */
+.reading-progress {
+  @apply fixed top-0 left-0 w-full h-1 bg-purple-500 z-50;
+  transform-origin: left;
+}
+
+/* Print styles */
+@media print {
+  .markdown-content {
+    @apply text-black;
+  }
+  
+  .markdown-content pre {
+    @apply bg-gray-100 text-black border border-gray-400;
+  }
+  
+  .markdown-content code {
+    @apply bg-gray-200 text-black;
+  }
+}

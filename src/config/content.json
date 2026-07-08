@@ -5,7 +5,16 @@
       "bio": {
         "short": "I'm a computational neuroscience graduate student at University of Colorado Denver, I am focused in the computational modeling of neural systems and applications in artificial intelligence.",
         "extended": [
-         ]
+          { "type": "paragraph", "text": "I'm Gunnar Enserro — a machine learning engineer, PhD student, and founder based in Colorado." },
+          { "type": "heading", "text": "Research" },
+          { "type": "paragraph", "text": "I'm a doctoral student in Computational Neuroscience at the University of Colorado Denver and Anschutz Medical Campus, working in Mazen Al Borno's lab. My research focuses on the dynamics of neural communication — building computational models of how the brain coordinates movement, fitting and sampling neural activity, and running distributed workloads on HPC clusters." },
+          { "type": "heading", "text": "Industry" },
+          { "type": "paragraph", "text": "I founded Stunn Inc., a machine learning consultancy. I build and deploy ML systems for corporate clients — document processing pipelines, fine-tuned LLMs for structured data extraction, and the cloud infrastructure (Kubernetes, containers, CI/CD) that keeps it running." },
+          { "type": "heading", "text": "Background" },
+          { "type": "paragraph", "text": "I started in IT and QA, moved into IoT development and product work, and eventually found my way into ML research. I also teach undergraduates in neuroscience, AI, and high-performance computing." },
+          { "type": "heading", "text": "Currently" },
+          { "type": "paragraph", "text": "I'm focused on applied ML — research, model development, MLOps, and data pipelines. If you're working on something at that intersection, feel free to reach out." }
+        ]
       },
       "skills": [
         "Machine Learning",

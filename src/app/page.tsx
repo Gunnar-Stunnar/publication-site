@@ -43,7 +43,7 @@ export default function Home() {
               {personal.bio.short}
             </p>
             <p className="text-lg mb-4">
-              {personal.bio.extended[1]}
+              {(personal.bio.extended[0] as { type: string; text: string }).text}
             </p>
             <div className="flex flex-wrap gap-4 mt-8">
               {personal.skills.slice(0, 3).map((skill, index) => (
