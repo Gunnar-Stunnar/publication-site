@@ -120,8 +120,28 @@ function createMarkdownComponents(theme: MarkdownTheme) {
       </a>
     ),
 
-    // Images
-    img: ({ src, alt }: any) => (
+    // Images (a .mp4/.webm src renders as a looping video, with a same-named .jpg as its poster)
+    img: ({ src, alt }: any) => /\.(mp4|webm)$/i.test(src ?? '') ? (
+      <span className="block my-6">
+        <video
+          src={src}
+          poster={src.replace(/\.(mp4|webm)$/i, '.jpg')}
+          aria-label={alt}
+          autoPlay
+          loop
+          muted
+          playsInline
+          controls
+          preload="metadata"
+          className="rounded-lg shadow-lg max-w-full h-auto mx-auto"
+        />
+        {alt && (
+          <span className="block text-center text-sm text-gray-500 mt-2 italic">
+            {alt}
+          </span>
+        )}
+      </span>
+    ) : (
       <span className="block my-6">
         <img
           src={src}

@@ -13,6 +13,18 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "4",
+    title: "The Fly Brain, Wired",
+    date: "2026-09-26",
+    excerpt: "FlyWire mapped every one of the 139,255 neurons in a fruit fly's brain. I turned that wiring diagram into a working simulation, then pulled it apart into the circuits for seeing, smelling, remembering and moving, and switched each one on. This post walks through all four, with renders and simulation videos.",
+    author: "Gunnar Enserro",
+    tags: ["neuroscience", "connectomics", "computational neuroscience", "simulation", "research"],
+    slug: "fly-brain-wired",
+    filePath: "fly-brain-wired.md",
+    backgroundImage: "/FlyBrain/tour.jpg",
+    imageAlt: "Rotating 3D rendering of thousands of real fly neurons, colored by job"
+  },
+  {
     id: "3",
     title: "Functionality of Predictive Coding",
     date: "2026-07-08",
