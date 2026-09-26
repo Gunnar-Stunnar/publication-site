@@ -2,6 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import { projects } from '@/data/projects';
 import ThermalThumbnail from '@/components/common/ThermalThumbnail';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Research Projects',
+  description: 'Computational neuroscience research projects by Gunnar Enserro, including interactive simulations of brain criticality.',
+  alternates: { canonical: '/projects' },
+};
 
 export default function ProjectsPage() {
   return (

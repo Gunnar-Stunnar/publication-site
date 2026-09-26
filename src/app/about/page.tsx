@@ -1,6 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import content from '@/config/content.json';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'Gunnar Enserro is a computational neuroscience PhD student at CU Denver / Anschutz, ML engineer and founder of Stunn Inc., modeling how the brain coordinates movement.',
+  alternates: { canonical: '/about' },
+};
 
 export default function AboutPage() {
   const { personal } = content;

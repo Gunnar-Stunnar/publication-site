@@ -5,6 +5,8 @@ import fs from 'fs';
 import path from 'path';
 import { blogPosts, BlogPost } from '@/data/blogPosts';
 import MarkdownRenderer from '@/components/blog/MarkdownRenderer';
+import type { Metadata } from 'next';
+import { site, absoluteUrl } from '@/config/site';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -53,7 +55,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: BlogPostPageProps) {
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = await getBlogPost(slug);
   
@@ -63,9 +65,33 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
     };
   }
 
+  const url = `/blog/${post.slug}`;
+  const images = post.backgroundImage
+    ? [{ url: post.backgroundImage, alt: post.imageAlt ?? post.title }]
+    : undefined;
+
   return {
     title: post.title,
     description: post.excerpt,
+    keywords: post.tags,
+    authors: [{ name: post.author, url: site.url }],
+    alternates: { canonical: url },
+    openGraph: {
+      type: 'article',
+      url,
+      title: post.title,
+      description: post.excerpt,
+      publishedTime: post.date,
+      authors: [post.author],
+      tags: post.tags,
+      images,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: post.backgroundImage ? [post.backgroundImage] : undefined,
+    },
   };
 }
 
@@ -77,8 +103,27 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    keywords: post.tags.join(', '),
+    url: absoluteUrl(`/blog/${post.slug}`),
+    mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
+    ...(post.backgroundImage && { image: absoluteUrl(post.backgroundImage) }),
+    author: { '@type': 'Person', '@id': `${site.url}/#person`, name: post.author, url: site.url },
+    publisher: { '@id': `${site.url}/#person` },
+  };
+
   return (
     <article className="py-12 max-w-4xl mx-auto">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <header className="mb-8">
         <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
         <div className="flex flex-wrap items-center gap-4 text-gray-600 mb-4">

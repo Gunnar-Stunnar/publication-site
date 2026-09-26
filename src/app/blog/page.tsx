@@ -1,6 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { blogPosts, BlogPost } from '@/data/blogPosts';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog',
+  description: 'Writing by Gunnar Enserro on computational neuroscience, connectomics, predictive coding, brain simulation and machine learning.',
+  alternates: { canonical: '/blog' },
+};
 
 export default function BlogPage() {
   return (
