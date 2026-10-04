@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Research Projects',
-  description: 'Computational neuroscience research projects by Gunnar Enserro, including interactive simulations of brain criticality.',
+  description: 'Computational neuroscience and machine learning projects by Gunnar Enserro, including interactive simulations of brain criticality and a first-place AWS DeepRacer model.',
   alternates: { canonical: '/projects' },
 };
 
