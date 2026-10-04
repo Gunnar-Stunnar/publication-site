@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { projects } from '@/data/projects';
-import ThermalThumbnail from '@/components/common/ThermalThumbnail';
+import ProjectImage from '@/components/common/ProjectImage';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map(project => (
           <div key={project.id} className="border border-gray-200 rounded-lg overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300 relative group">
-            <ThermalThumbnail type={project.thumbnail} />
+            <ProjectImage project={project} />
             <div className="p-6 relative">
               {/* Glass card effect */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 glass-card"></div>

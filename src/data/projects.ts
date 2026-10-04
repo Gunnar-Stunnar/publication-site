@@ -3,6 +3,8 @@ export interface Project {
   title: string;
   description: string;
   thumbnail: string;
+  image?: string;
+  imageAlt?: string;
   tags: string[];
   featured: boolean;
   hasDemo: boolean;
@@ -14,6 +16,8 @@ export const projects: Project[] = [
     title: "Brain Criticality Theory",
     description: "Exploring how neural systems may operate at critical points between order and disorder for optimal information processing.",
     thumbnail: "thermal",
+    image: "/projects/ising-criticality.svg",
+    imageAlt: "Ising model lattice near its critical temperature, showing clusters of aligned spins at every scale",
     tags: ["Computational Neuroscience", "Statistical Physics", "Complex Systems"],
     featured: true,
     hasDemo: true
@@ -23,6 +27,8 @@ export const projects: Project[] = [
     title: "Teaching a Race Car to See the Racing Line",
     description: "How a linear regression on track waypoints became a first-place AWS DeepRacer model: a hidden expert in the reward function, a physics-based racing line, and a teacher damped to stop the wobble.",
     thumbnail: "gradient",
+    image: "/projects/deepracer/racing_line.png",
+    imageAlt: "Racing line on the re:Invent 2018 track, colored by target speed",
     tags: ["Reinforcement Learning", "Imitation Learning", "Control Theory", "HPC"],
     featured: true,
     hasDemo: true
