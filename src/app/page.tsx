@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/data/projects";
-import ProjectImage from "@/components/common/ProjectImage";
+import ProjectCard from "@/components/common/ProjectCard";
 import content from "@/config/content.json";
+
+export const revalidate = 3600;
 
 export default function Home() {
   const { personal } = content;
@@ -68,28 +70,7 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-6">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.slice(0, 3).map(project => (
-            <div key={project.id} className="border border-gray-200 rounded-lg overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300 relative group">
-              <ProjectImage project={project} />
-              <div className="p-6 relative">
-                {/* Glass card effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 glass-card"></div>
-                <h2 className="text-xl font-bold mb-2 relative z-10">{project.title}</h2>
-                <p className="text-gray-700 mb-4 relative z-10">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4 relative z-10">
-                  {project.tags.slice(0, 2).map(tag => (
-                    <span key={tag} className="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <Link 
-                  href={`/projects/${project.id}`}
-                  className="px-4 py-2 bg-black text-white rounded hover:bg-gray-800 relative z-10 inline-block"
-                >
-                  View Project
-                </Link>
-              </div>
-            </div>
+            <ProjectCard key={project.id} project={project} maxTags={2} />
           ))}
         </div>
         <div className="mt-8 text-center">

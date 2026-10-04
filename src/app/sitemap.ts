@@ -1,7 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { blogPosts } from '@/data/blogPosts';
-import { projects } from '@/data/projects';
+import { projects, isLocked } from '@/data/projects';
 import { absoluteUrl } from '@/config/site';
+
+export const revalidate = 3600;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const latestPost = blogPosts.map(post => post.date).sort().at(-1);
@@ -19,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
       ...(post.backgroundImage && { images: [absoluteUrl(post.backgroundImage)] }),
     })),
-    ...projects.map(project => ({
+    ...projects.filter(project => !isLocked(project)).map(project => ({
       url: absoluteUrl(`/projects/${project.id}`),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
