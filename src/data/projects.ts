@@ -13,7 +13,9 @@ export interface Project {
 }
 
 export const isLocked = (project: Project, now: Date = new Date()) =>
-  !!project.availableFrom && now < new Date(project.availableFrom);
+  process.env.NODE_ENV !== 'development' &&
+  !!project.availableFrom &&
+  now < new Date(project.availableFrom);
 
 export const lockedMessage = (project: Project) =>
   `Will display after ${project.availableLabel ?? 'a later date'}`;
@@ -39,8 +41,6 @@ export const projects: Project[] = [
     imageAlt: "Racing line on the re:Invent 2018 track, colored by target speed",
     tags: ["Reinforcement Learning", "Imitation Learning", "Control Theory", "HPC"],
     featured: true,
-    hasDemo: true,
-    availableFrom: "2026-10-09T00:00:00-06:00",
-    availableLabel: "Oct 8, 2026"
+    hasDemo: true
   }
 ];
