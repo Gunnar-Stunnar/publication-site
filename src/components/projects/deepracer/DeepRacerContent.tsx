@@ -245,7 +245,7 @@ minimize   Σ ‖ p_(i−1) − 2·p_i + p_(i+1) ‖²`}</pre>
         <li>digging through simulator logs and failure videos, which is how the wobble was traced back to the teacher;</li>
         <li>writing the reward functions, the evaluation scripts, and the interactive demos on this page.</li>
       </ul>
-      <p>Most of the useful turns came from checking an idea quickly and looking honestly at the result, including the ones that didn't work. Having a collaborator that could build, test and report back that fast is a big part of how the project got from a linear regression to first place in a few weeks.</p>
+      <p>Most of the useful turns came from checking an idea quickly and looking honestly at the result, including the ones that didn't work. Having a collaborator that could build, test and report back that fast is a big part of how the project got from a linear regression to first place in a few days.</p>
     </div>
   </section>
 
