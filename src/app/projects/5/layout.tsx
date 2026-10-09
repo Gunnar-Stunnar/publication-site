@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { projects, isLocked } from '@/data/projects';
 
-const title = 'Winning CEDC AI Grand Prix 2026';
+const title = 'First Place in CEDC AI Grand Prix 2026';
 
 export function generateMetadata(): Metadata {
   const project = projects.find(p => p.id === '5')!;

@@ -6,7 +6,7 @@ export default function DeepRacerContent() {
     <>
 <div className="py-8">
   <Link href="/projects" className="text-gray-500 hover:text-black text-sm">← Back to projects</Link>
-  <h1 className="text-4xl font-bold mb-4 mt-4">Winning CEDC AI Grand Prix 2026</h1>
+  <h1 className="text-4xl font-bold mb-4 mt-4">First Place in CEDC AI Grand Prix 2026</h1>
 
     <div className="bg-white p-6 rounded-lg shadow mb-8">
     <h2 className="text-2xl font-bold mb-4">Project Overview</h2>

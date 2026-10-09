@@ -3,9 +3,9 @@
       "name": "Gunnar E",
       "title": "Computational Neuroscience Graduate Student",
       "bio": {
-        "short": "I'm a computational neuroscience graduate student at University of Colorado Denver, I am focused in the computational modeling of neural systems and applications in artificial intelligence.",
+        "short": "I'm a computational neuroscience graduate student at University of Colorado Denver focused in the computational modeling of neural systems and applications in artificial intelligence.",
         "extended": [
-          { "type": "paragraph", "text": "I'm Gunnar Enserro — a machine learning engineer, PhD student, and founder based in Colorado." },
+          { "type": "paragraph", "text": "I'm Gunnar Enserro — a machine learning engineer, PhD student, and founder of Stunn Inc. based in Colorado." },
           { "type": "heading", "text": "Research" },
           { "type": "paragraph", "text": "I'm a doctoral student in Computational Neuroscience at the University of Colorado Denver and Anschutz Medical Campus, working in Mazen Al Borno's lab. My research focuses on the dynamics of neural communication — building computational models of how the brain coordinates movement, fitting and sampling neural activity, and running distributed workloads on HPC clusters." },
           { "type": "heading", "text": "Industry" },
