@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
         mono: ["var(--font-geist-mono)"],
+        doom: ["var(--font-vt323)", "monospace"],
       },
     },
   },

@@ -42,5 +42,16 @@ export const projects: Project[] = [
     tags: ["Reinforcement Learning", "Imitation Learning", "Control Theory", "HPC"],
     featured: true,
     hasDemo: true
+  },
+  {
+    id: "6",
+    title: "Neurons Playing Doom",
+    description: "A simulated dish of neurons learns to play Doom with no reward, only predictable and unpredictable stimulation. A hands-on tour of the free energy principle, maximum entropy and Bayesian inference.",
+    thumbnail: "thermographic",
+    image: "/projects/doom-neurons.svg",
+    imageAlt: "A simulated culture of spiking neurons on an electrode array, with a spike raster along the bottom",
+    tags: ["Free Energy Principle", "Bayesian Inference", "Spiking Neural Networks", "Computational Neuroscience"],
+    featured: true,
+    hasDemo: true
   }
 ];

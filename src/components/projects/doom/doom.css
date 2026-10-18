@@ -1,0 +1,34 @@
+.doom-page canvas.pixel {image-rendering: pixelated; image-rendering: crisp-edges;}
+.doom-page canvas {display: block; width: 100%; height: auto;}
+.doom-page .hud {background: linear-gradient(#5b5b5b, #3d3d3d); border-top: 3px solid #777;}
+.doom-page .hud .num {color: #e03a2e; text-shadow: 2px 2px 0 #300;}
+.doom-page input[type='range'] {accent-color: #3b82f6;}
+.doom-page .post {max-width: 48rem;}
+.doom-page .post p {font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 1.1rem;}
+.doom-page .post h2 {font-size: 1.5rem; font-weight: 700; margin: 3.5rem 0 1rem;}
+.doom-page .post h3 {font-size: 1.25rem; font-weight: 700; margin: 2.25rem 0 0.75rem;}
+.doom-page .post ul {list-style: disc; padding-left: 1.5rem; margin-bottom: 1.1rem; font-size: 1.125rem; line-height: 1.75rem;}
+.doom-page .post li {margin-bottom: 0.4rem;}
+.doom-page .post a {color: #2563eb; text-decoration: underline; text-underline-offset: 2px;}
+.doom-page .post .katex-display {margin: 1.25rem 0; overflow-x: auto; overflow-y: hidden; padding: 0.25rem 0;}
+.doom-page .post code {font-size: 0.95em; background: #f3f4f6; padding: 0.05rem 0.3rem; border-radius: 0.25rem;}
+.doom-page figure.fig {margin: 1.75rem 0 2.25rem;}
+.doom-page figure.fig figcaption {font-size: 0.875rem; color: #4b5563; margin-top: 0.75rem; max-width: 48rem;}
+.doom-page .callout {border-left: 3px solid #3b82f6; background: #f9fafb; padding: 0.9rem 1.1rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0;}
+.doom-page .callout p:last-child {margin-bottom: 0;}
+.doom-page [data-lv] {display: none;}
+.doom-page.level-easy [data-lv~="easy"], .doom-page.level-medium [data-lv~="medium"], .doom-page.level-graduate [data-lv~="graduate"] {display: block; animation: lvfade 0.35s ease;}
+.doom-page.level-easy .adv {display: none !important;}
+.doom-page .lv-easy {display: none;}
+.doom-page.level-easy .lv-easy {display: inline;}
+.doom-page.level-easy .lv-hard {display: none;}
+.doom-page .grad-note {border-left: 3px solid #f97316; background: #fff7ed; padding: 1rem 1.2rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0;}
+.doom-page .grad-note > .tag, .doom-page .try > .tag {font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem;}
+.doom-page .grad-note > .tag {color: #c2410c;}
+.doom-page .grad-note p, .doom-page .grad-note li {font-size: 1rem !important; line-height: 1.6rem !important;}
+.doom-page .try {border-left: 3px solid #22c55e; background: #f0fdf4; padding: 0.9rem 1.2rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.25rem 0;}
+.doom-page .try > .tag {color: #15803d;}
+.doom-page .try ol {list-style: decimal; padding-left: 1.4rem; font-size: 1rem; line-height: 1.6rem;}
+.doom-page .try li {margin-bottom: 0.3rem;}
+.doom-page {padding-bottom: 7rem !important;}
+@keyframes lvfade { from { opacity: 0.25; } to { opacity: 1; } }
