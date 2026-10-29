@@ -1,0 +1,36 @@
+.neuron-page canvas {display: block; width: 100%; height: auto;}
+.neuron-page input[type='range'] {accent-color: #3b82f6;}
+.neuron-page .post {max-width: 48rem;}
+.neuron-page .post p {font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 1.1rem;}
+.neuron-page .post h2 {font-size: 1.5rem; font-weight: 700; margin: 3.5rem 0 1rem;}
+.neuron-page .post h3 {font-size: 1.25rem; font-weight: 700; margin: 2.25rem 0 0.75rem;}
+.neuron-page .post ul {list-style: disc; padding-left: 1.5rem; margin-bottom: 1.1rem; font-size: 1.125rem; line-height: 1.75rem;}
+.neuron-page .post li {margin-bottom: 0.4rem;}
+.neuron-page .post a {color: #2563eb; text-decoration: underline; text-underline-offset: 2px;}
+.neuron-page .post .katex-display {margin: 1.25rem 0; overflow-x: auto; overflow-y: hidden; padding: 0.25rem 0;}
+.neuron-page .post code {font-size: 0.95em; background: #f3f4f6; padding: 0.05rem 0.3rem; border-radius: 0.25rem;}
+.neuron-page figure.fig {margin: 1.75rem 0 2.25rem;}
+.neuron-page figure.fig figcaption {font-size: 0.875rem; color: #4b5563; margin-top: 0.75rem; max-width: 48rem;}
+.neuron-page .callout {border-left: 3px solid #3b82f6; background: #f9fafb; padding: 0.9rem 1.1rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0;}
+.neuron-page .callout p:last-child {margin-bottom: 0;}
+.neuron-page [data-lv] {display: none;}
+.neuron-page.level-easy [data-lv~="easy"], .neuron-page.level-medium [data-lv~="medium"], .neuron-page.level-graduate [data-lv~="graduate"] {display: block; animation: lvfade 0.35s ease;}
+.neuron-page.level-easy .adv {display: none !important;}
+.neuron-page .lv-easy {display: none;}
+.neuron-page.level-easy .lv-easy {display: inline;}
+.neuron-page.level-easy .lv-hard {display: none;}
+.neuron-page .grad-note {border-left: 3px solid #f97316; background: #fff7ed; padding: 1rem 1.2rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0;}
+.neuron-page .grad-note > .tag, .neuron-page .try > .tag {font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem;}
+.neuron-page .grad-note > .tag {color: #c2410c;}
+.neuron-page .grad-note p, .neuron-page .grad-note li {font-size: 1rem !important; line-height: 1.6rem !important;}
+.neuron-page .try {border-left: 3px solid #22c55e; background: #f0fdf4; padding: 0.9rem 1.2rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.25rem 0;}
+.neuron-page .try > .tag {color: #15803d;}
+.neuron-page .try ol {list-style: decimal; padding-left: 1.4rem; font-size: 1rem; line-height: 1.6rem;}
+.neuron-page .try li {margin-bottom: 0.3rem;}
+.neuron-page {padding-bottom: 7rem !important;}
+@keyframes lvfade { from { opacity: 0.25; } to { opacity: 1; } }
+.neuron-page .disclaimer {border: 1px solid #fde68a; background: #fffbeb; padding: 0.9rem 1.1rem; border-radius: 0.5rem; margin: 0 0 2rem;}
+.neuron-page .disclaimer > .tag {font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #b45309; margin-bottom: 0.4rem;}
+.neuron-page .disclaimer p {font-size: 1rem !important; line-height: 1.6rem !important; margin-bottom: 0.5rem;}
+.neuron-page .disclaimer p:last-child {margin-bottom: 0;}
+.neuron-page [data-eq] .katex {font-size: 1em;}

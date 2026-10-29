@@ -53,5 +53,16 @@ export const projects: Project[] = [
     tags: ["Free Energy Principle", "Bayesian Inference", "Spiking Neural Networks", "Computational Neuroscience"],
     featured: true,
     hasDemo: true
+  },
+  {
+    id: "7",
+    title: "The Mathematical Beauty of a Neuron",
+    description: "Build a neuron from its equations: an RK4 solver tested on the Lorenz butterfly, the integrate-and-fire family and the shape of a spike, synapses, and STDP, ending with one neuron that learns which inputs belong together.",
+    thumbnail: "gradient",
+    image: "/projects/neuron-math.svg",
+    imageAlt: "The Lorenz attractor behind the voltage trace of a firing integrate-and-fire neuron",
+    tags: ["Numerical Methods", "Spiking Neuron Models", "Synaptic Plasticity", "Computational Neuroscience"],
+    featured: true,
+    hasDemo: true
   }
 ];

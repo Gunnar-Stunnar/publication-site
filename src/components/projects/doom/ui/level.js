@@ -9,7 +9,7 @@ const LEVELS = [
 ];
 const WIDE = 1400; // above this the page has empty margins, so stay expanded
 
-export function startLevel() {
+export function startLevel({ rootSelector = '.doom-page', storageKey = 'doom-post' } = {}) {
 let current = 'medium';
 let open = false;
 
@@ -17,7 +17,7 @@ let open = false;
 // noticed. Remembered across visits; a static ring under reduced motion.
 let seen = false;
 try {
-  seen = localStorage.getItem('doom-post-level-seen') === '1';
+  seen = localStorage.getItem(`${storageKey}-level-seen`) === '1';
 } catch {}
 const style = document.createElement('style');
 style.textContent = `
@@ -36,7 +36,7 @@ function initialLevel() {
   const q = new URLSearchParams(location.search).get('level');
   if (LEVELS.some((l) => l.id === q)) return q;
   try {
-    const s = localStorage.getItem('doom-post-level');
+    const s = localStorage.getItem(`${storageKey}-level`);
     if (LEVELS.some((l) => l.id === s)) return s;
   } catch {}
   return 'medium';
@@ -52,7 +52,7 @@ function anchor() {
   return null;
 }
 
-const root = document.querySelector('.doom-page');
+const root = document.querySelector(rootSelector);
 const box = document.createElement('div');
 box.id = 'level-switch';
 box.className = 'fixed z-50 bottom-4 right-4 max-w-[calc(100vw-2rem)]';
@@ -100,7 +100,7 @@ function apply(level, { keepPlace = true } = {}) {
   }
   if (shared && shared.offsetParent !== null) window.scrollBy(0, shared.getBoundingClientRect().top - before);
   try {
-    localStorage.setItem('doom-post-level', level);
+    localStorage.setItem(`${storageKey}-level`, level);
   } catch {}
   const url = new URL(location.href);
   url.searchParams.set('level', level);
@@ -118,7 +118,7 @@ box.addEventListener('click', (ev) => {
   if (!seen) {
     seen = true;
     try {
-      localStorage.setItem('doom-post-level-seen', '1');
+      localStorage.setItem(`${storageKey}-level-seen`, '1');
     } catch {}
     for (const el of box.querySelectorAll('.lv-attn')) el.classList.remove('lv-attn');
   }
