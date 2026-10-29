@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { projects, isLocked } from '@/data/projects';
+import { projects, isLocked, projectShareMetadata } from '@/data/projects';
 
 const title = 'First Place in CEDC AI Grand Prix 2026';
 
@@ -14,11 +14,7 @@ export function generateMetadata(): Metadata {
     title,
     description: 'How a linear regression on track waypoints became a first-place AWS DeepRacer model: teachers inside reward functions, racing lines, and damping a wobbling car. Includes interactive demos.',
     alternates: { canonical: '/projects/5' },
-    openGraph: {
-      title,
-      description: 'A first-place DeepRacer model built from a linear readout, a hidden expert in the reward function, and a damped teacher.',
-      images: [{ url: '/projects/deepracer/racing_line.png' }],
-    },
+    ...projectShareMetadata('5', title, 'A first-place DeepRacer model built from a linear readout, a hidden expert in the reward function, and a damped teacher.'),
   };
 }
 
