@@ -122,8 +122,11 @@ export class CompetitionNeuron {
     k = this.poisson(nInd * pr);
     while (k--) this.pre(p.nCorr + Math.floor(this.rng() * nInd));
 
-    if (this.t < this.refUntil) this.y[0] = p.Vr;
-    else this.step(this.f, this.t, this.y, p.dt);
+    // refractory: V is held at reset, but the synaptic current keeps decaying
+    if (this.t < this.refUntil) {
+      this.y[1] *= Math.exp(-p.dt / p.tauS);
+      this.y[0] = p.Vr;
+    } else this.step(this.f, this.t, this.y, p.dt);
     this.yPost *= Math.exp(-p.dt / p.tauMinus);
     this.t += p.dt;
     if (this.y[0] >= p.VT) {

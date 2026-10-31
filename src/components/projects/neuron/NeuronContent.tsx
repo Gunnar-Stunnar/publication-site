@@ -657,10 +657,10 @@ Try this
 </div>
 <ol>
 <li>
-Press Play at 10×. Within about 30 simulated seconds the blue bars climb to the top and the grey ones start to sink.
+Press Play at 10×. Within about a minute of simulated time the blue bars climb to the top, and the grey ones keep sinking after that.
 </li>
 <li>
-Watch the output row in the raster. As learning proceeds, its spikes line up with the purple source spikes.
+Watch the output row in the raster and the readout above it. From the start, most output spikes come right after a purple source spike: 40 inputs firing at once is a big kick. While the blue bars grow, extra spikes driven by the background creep in and the share drops. Once the grey bars fade, those extra spikes go away and the share climbs back up.
 </li>
 <li>
 Untick Learning partway through. The weights freeze but the neuron keeps firing. All the change came from that one timing rule.
@@ -714,7 +714,7 @@ Everything here is a point neuron.
 <strong>
 The finale is a toy.
 </strong>
-{" "}400 inputs instead of thousands, no inhibition, current-based synapses, constant input rates, and an output rate of 30–60 Hz, higher than most cortical neurons. With Song et al.&rsquo;s conductance-based setup and balanced inhibition, the same competition happens at more realistic rates.
+{" "}400 inputs instead of thousands, no inhibition, current-based synapses, constant input rates, and an output rate of 20–55 Hz, higher than most cortical neurons. With Song et al.&rsquo;s conductance-based setup and balanced inhibition, the same competition happens at more realistic rates.
 </li>
 <li>
 <strong>
